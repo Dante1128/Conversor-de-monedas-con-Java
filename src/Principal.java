@@ -10,16 +10,16 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner lectura = new Scanner(System.in);
+       // Scanner lectura = new Scanner(System.in);
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .create();
-        while (true){
-            System.out.println("Escriba la cantidad a comvertir: ");
-            var conversion = lectura.nextInt();
-            if (conversion == 9){
-                break;
-            }
+      //  while (true){
+          //  System.out.println("Escriba la cantidad a comvertir: ");
+            //var conversion = lectura.nextInt();
+           // if (conversion == 9){
+              //  break;
+           // }
             String direccion = "https://v6.exchangerate-api.com/v6/f374f2b6943319cebd94ef3a/latest/USD";
 
             try{
@@ -38,6 +38,6 @@ public class Principal {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        }
+       // }
     }
 }
